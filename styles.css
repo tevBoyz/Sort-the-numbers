@@ -66,8 +66,9 @@ body {
 }
 
 .box {
-  width: 25px;
+  flex: 1;
   height: 50%;
+  margin: 10px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -91,7 +92,38 @@ body {
   border: 2px solid red;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300) {
+  .bottom_container {
+    flex: 2;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    flex: 1;
+    height: 50%;
+    margin: 1px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .box:hover {
+    border: 1px solid green;
+    transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .bottom_container {
     flex: 2;
     width: 100%;
