@@ -116,10 +116,16 @@ function reply_click(id){
 function randomize(){
     prev = num;
     num = random4Digit();
-    animateValue(disp, num - 200, num, 1000);}
+    animateValue(disp, num - 200, num, 1000);
+}
 
 function random4Digit(){
-    return shuffle( "123456789".split('') ).join('').substring(0,3);
+    
+    let temp = shuffle( "123456789".split('') ).join('').substring(0,3);
+    while(trackingArr.indexOf(temp) != -1){
+        temp = shuffle( "123456789".split('') ).join('').substring(0,3);
+    }
+    return temp;
 }
   
 function shuffle(o){
