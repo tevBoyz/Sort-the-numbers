@@ -18,13 +18,13 @@ function start(){
 
 function reset(){
     resetBoxes();
+    num = prev = 0;
     trackingArr = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
     start();
 }
 
 function checkArray(){
     let arr = (trackingArr.indexOf(-1) !== -1) ? truncateArr() : trackingArr;
-    console.log(arr);
 
     return isAscending(arr);
 }
@@ -80,13 +80,11 @@ function updateButton(){
 }
 
 function reply_click(id){
-    console.log("clicked " +id);
     clickedBox = document.getElementById(""+id+"")
     if ((num != 0) && (clickedBox.innerHTML == '---'))
     {
         clickedBox.innerHTML = num;
         trackingArr[id-1] = num;
-        console.log(checkArray());
         if(checkArray()[0]){
             if(checkArray()[2]){
                 alert("You Won! The list is sorted");
@@ -97,6 +95,7 @@ function reply_click(id){
         }
         else{
             let postionFailed = trackingArr.indexOf(checkArray()[1]);
+            document.getElementById(""+ (postionFailed+2) +"").classList.add("red");
             document.getElementById(""+ (postionFailed+1) +"").classList.add("red");
             alert("Sorting failed");
         }
@@ -116,14 +115,14 @@ function reply_click(id){
 function randomize(){
     prev = num;
     num = random4Digit();
-    animateValue(disp, num - 200, num, 1000);
+    animateValue(disp, 0, num, 1000);
 }
 
 function random4Digit(){
     
-    let temp = shuffle( "123456789".split('') ).join('').substring(0,3);
+    let temp = shuffle( "0123456789".split('') ).join('').substring(0,3);
     while(trackingArr.indexOf(temp) != -1){
-        temp = shuffle( "123456789".split('') ).join('').substring(0,3);
+        temp = shuffle( "0123456789".split('') ).join('').substring(0,3);
     }
     return temp;
 }
