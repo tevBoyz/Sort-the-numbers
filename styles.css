@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 10px solid green;
+  border: 10px solid rgb(86, 208, 212);
 }
 
 .numDisplay h1 {
@@ -53,7 +53,7 @@ body {
 }
 
 .start_reset_button:hover {
-  background-color: green;
+  background-color: rgb(86, 208, 212);
   box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.5);
   color: white;
 }
@@ -86,11 +86,11 @@ body {
 }
 
 .box:hover {
-  border: 3px solid green;
+  border: 3px solid rgb(86, 208, 212);
 }
 
 .box span {
-  font-size: 10px;
+  font-size: 20px;
 }
 
 .red {
@@ -124,7 +124,7 @@ body {
   }
 
   .box:hover {
-    border: 1px solid green;
+    border: 1px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -159,7 +159,7 @@ body {
   }
 
   .box:hover {
-    border: 1px solid green;
+    border: 1px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -194,7 +194,7 @@ body {
   }
 
   .box:hover {
-    border: 1px solid green;
+    border: 1px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -219,7 +219,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 10px solid green;
+    border: 10px solid rgb(86, 208, 212);
   }
 
   .numDisplay h1 {
@@ -253,7 +253,7 @@ body {
   }
 
   .box:hover {
-    border: 1px solid green;
+    border: 1px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -277,7 +277,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 10px solid green;
+    border: 10px solid rgb(86, 208, 212);
   }
 
   .numDisplay h1 {
@@ -312,7 +312,7 @@ body {
   }
 
   .box:hover {
-    border: 1px solid green;
+    border: 1px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -347,7 +347,7 @@ body {
     justify-content: center;
     align-items: center;
     border: none;
-    border: 3px solid green;
+    border: 3px solid rgb(86, 208, 212);
   }
 
   .numDisplay h1 {
@@ -367,7 +367,7 @@ body {
   }
 
   .start_reset_button:hover {
-    background-color: green;
+    background-color: rgb(86, 208, 212);
     box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.5);
     color: white;
   }
@@ -398,7 +398,7 @@ body {
   }
 
   .box:hover {
-    border: 3px solid green;
+    border: 3px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -436,7 +436,7 @@ body {
     justify-content: center;
     align-items: center;
     border: none;
-    border: 3px solid green;
+    border: 3px solid rgb(86, 208, 212);
   }
 
   .numDisplay h1 {
@@ -457,7 +457,7 @@ body {
   }
 
   .start_reset_button:hover {
-    background-color: green;
+    background-color: rgb(86, 208, 212);
     box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.5);
     color: white;
   }
@@ -488,7 +488,7 @@ body {
   }
 
   .box:hover {
-    border: 3px solid green;
+    border: 3px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -530,7 +530,7 @@ body {
     justify-content: center;
     align-items: center;
     border: none;
-    border: 3px solid green;
+    border: 3px solid rgb(86, 208, 212);
   }
 
   .numDisplay h1 {
@@ -551,7 +551,7 @@ body {
   }
 
   .start_reset_button:hover {
-    background-color: green;
+    background-color: rgb(86, 208, 212);
     box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.5);
     color: white;
   }
@@ -582,7 +582,7 @@ body {
   }
 
   .box:hover {
-    border: 3px solid green;
+    border: 3px solid rgb(86, 208, 212);
   }
 
   .box span {
@@ -592,4 +592,68 @@ body {
   .red {
     border: 2px solid red;
   }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Full width */
+  height: 70%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instructions h2 {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.instructions h3 {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.instructions span {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.modal-content div {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+/* The Close Button */
+.close {
+  align-self: start;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
