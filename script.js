@@ -6,7 +6,8 @@ var started = false;
 let num = 0;
 let prev = 0;
 
-var trackingArr = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+var trackingArr = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+var answerArr = [];
 
   // Get the modal
   var modal = document.getElementById("myModal");
@@ -38,15 +39,17 @@ var trackingArr = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -
 popup();
 
 function start(){
-    randomize();
     started = true;
     updateButton();
+    prepAnsArr();
+    randomize();
 }
 
 function reset(){
     resetBoxes();
     num = prev = 0;
     trackingArr = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+    answerArr = [];
     start();
 }
 
@@ -140,9 +143,25 @@ function reply_click(id){
 }
 
 function randomize(){
-    prev = num;
-    num = random4Digit();
+    // prev = num;
+    let indexx = randomIndex();
+    num = answerArr[indexx];
     animateValue(disp, 0, num, 1000);
+    let halfBeforeTheUnwantedElement = answerArr.slice(0, indexx);
+    let halfAfterTheUnwantedElement = answerArr.slice(indexx + 1);
+    answerArr = halfBeforeTheUnwantedElement.concat(halfAfterTheUnwantedElement);
+}
+
+function randomIndex(){
+    return Math.floor(Math.random() * answerArr.length);
+}
+
+function prepAnsArr(){
+    while(answerArr.length < 20){
+        answerArr.push(random4Digit());
+    }
+    answerArr.sort();
+    console.log(answerArr);
 }
 
 function random4Digit(){
