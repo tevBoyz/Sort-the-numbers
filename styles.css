@@ -61,6 +61,7 @@ body {
 .bottom_container {
   flex: 1;
   width: 100%;
+  min-width: 90%;
   padding: 10px;
   display: flex;
   border: 1px solid white;
@@ -71,6 +72,8 @@ body {
 
 .box {
   flex: 1;
+  min-width: 35px;
+  max-width: 60px;
   height: 50%;
   margin: 10px;
   border: 1px solid white;
@@ -95,7 +98,7 @@ body {
   border: 2px solid red;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1620px) {
   .bottom_container {
     flex: 2;
     width: 100%;
@@ -109,6 +112,8 @@ body {
   }
 
   .box {
+    min-width: 40px;
+    max-width: 60px;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -142,6 +147,8 @@ body {
   }
 
   .box {
+    min-width: 40px;
+    max-width: 60px;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -175,6 +182,8 @@ body {
   }
 
   .box {
+    min-width: 40px;
+    max-width: 60px;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -194,7 +203,7 @@ body {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 440px) {
   .top_container {
     flex: 1.5;
     width: 100%;
@@ -203,6 +212,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 1px solid blue;
+    overflow: hidden;
   }
 
   .numDisplay {
@@ -228,9 +238,72 @@ body {
     gap: 5px;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
   }
 
   .box {
+    min-width: 40px;
+    max-width: 60px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .box:hover {
+    border: 1px solid green;
+  }
+
+  .box span {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .top_container {
+    flex: 1.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    overflow: hidden;
+  }
+
+  .numDisplay {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid green;
+  }
+
+  .numDisplay h1 {
+    font-size: 40px;
+  }
+
+  .bottom_container {
+    flex: 2;
+    width: 100%;
+    min-width: 270px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .box {
+    min-width: 40px;
+    max-width: 60px;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -255,38 +328,40 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+    overflow: hidden;
   }
 
   .top_container {
-    flex: 1.5;
+    flex: 1;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid blue;
   }
 
   .numDisplay {
-    height: 300px;
-    width: 300px;
+    height: fit-content;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 10px solid green;
+    border: none;
+    border-bottom: 3px solid green;
   }
 
   .numDisplay h1 {
-    font-size: 60px;
+    font-size: 30px;
+    padding: 5px;
   }
 
   .start_reset_button {
-    height: 50px;
-    width: 150px;
+    height: 40px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,16 +380,18 @@ body {
   .bottom_container {
     flex: 2;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    gap: 2px;
     justify-content: space-around;
     align-items: center;
   }
 
   .box {
+    min-width: 20px;
+    max-width: 40px;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
